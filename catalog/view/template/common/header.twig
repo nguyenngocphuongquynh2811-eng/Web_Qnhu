@@ -75,11 +75,17 @@
   </nav>
   <header>
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-md-3 col-lg-4">
           <div id="logo">
             {% if logo %}
-              <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid"/></a>
+              <a href="{{ home }}" class="logo-brand">
+                <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"/>
+                <span class="logo-text">
+                  <span class="logo-name">{{ name }}</span>
+                  <span class="logo-tagline">Music for a brighter you</span>
+                </span>
+              </a>
             {% else %}
               <h1><a href="{{ home }}">{{ name }}</a></h1>
             {% endif %}

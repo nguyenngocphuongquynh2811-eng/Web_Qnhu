@@ -1,0 +1,27 @@
+<link href="catalog/view/stylesheet/chatbot.css" type="text/css" rel="stylesheet"/>
+<div id="chatbot" class="chatbot" data-config="{{ config }}">
+  <button type="button" class="chatbot-toggle" aria-label="{{ text_open }}" aria-expanded="false" aria-controls="chatbot-panel">
+    <i class="fa-solid fa-comment-dots chatbot-icon-open"></i>
+    <i class="fa-solid fa-xmark chatbot-icon-close"></i>
+    <span class="chatbot-badge" aria-hidden="true">1</span>
+  </button>
+  <section id="chatbot-panel" class="chatbot-panel" role="dialog" aria-label="{{ title }}" hidden>
+    <div class="chatbot-header">
+      {% if logo %}
+        <img src="{{ logo }}" alt="{{ name }}" class="chatbot-avatar"/>
+      {% endif %}
+      <div class="chatbot-heading">
+        <strong>{{ title }}</strong>
+        <span><i class="fa-solid fa-circle"></i> {{ text_status }}</span>
+      </div>
+      <button type="button" class="chatbot-close" aria-label="{{ text_close }}"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chatbot-messages" aria-live="polite"></div>
+    <div class="chatbot-chips"></div>
+    <form class="chatbot-form" autocomplete="off">
+      <input type="text" name="message" maxlength="300" placeholder="{{ text_placeholder }}" aria-label="{{ text_placeholder }}"/>
+      <button type="submit" aria-label="{{ text_send }}"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </section>
+</div>
+<script src="catalog/view/javascript/chatbot.js" type="text/javascript"></script>

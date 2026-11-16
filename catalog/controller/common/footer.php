@@ -86,6 +86,7 @@ class Footer extends \Opencart\System\Engine\Controller {
 		$data['bootstrap'] = 'catalog/view/javascript/bootstrap/js/bootstrap.bundle.min.js';
 		$data['scripts'] = $this->document->getScripts('footer');
 		$data['cookie'] = $this->load->controller('common/cookie');
+		$data['chatbot'] = $this->load->controller('common/chatbot');
 
 		return $this->load->view('common/footer', $data);
 	}
